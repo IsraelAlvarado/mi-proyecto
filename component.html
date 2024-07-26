@@ -1,0 +1,326 @@
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/XjqDXWGLxm5
+-->
+
+<div class="flex flex-col h-screen">
+  <header class="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <a class="text-xl font-bold" href="#">
+        Image Manager
+      </a>
+      <nav class="hidden md:flex items-center gap-4">
+        <a class="hover:text-muted-foreground" href="#">
+          Home
+        </a>
+        <a class="hover:text-muted-foreground" href="#">
+          Update
+        </a>
+        <a class="hover:text-muted-foreground" href="#">
+          Search
+        </a>
+        <a class="hover:text-muted-foreground" href="#">
+          Extract Text
+        </a>
+        <a class="hover:text-muted-foreground" href="#">
+          Delete
+        </a>
+      </nav>
+    </div>
+    <button class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 hidden md:flex">
+      Chat
+    </button>
+  </header>
+  <main class="flex-1 grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8 p-6">
+    <div class="grid gap-6">
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Recent Images</h3>
+          <p class="text-sm text-muted-foreground">View and manage your most recent images.</p>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <img
+              src="/placeholder.svg"
+              width="300"
+              height="200"
+              alt="Image"
+              class="aspect-video object-cover rounded-md"
+            />
+            <img
+              src="/placeholder.svg"
+              width="300"
+              height="200"
+              alt="Image"
+              class="aspect-video object-cover rounded-md"
+            />
+            <img
+              src="/placeholder.svg"
+              width="300"
+              height="200"
+              alt="Image"
+              class="aspect-video object-cover rounded-md"
+            />
+            <img
+              src="/placeholder.svg"
+              width="300"
+              height="200"
+              alt="Image"
+              class="aspect-video object-cover rounded-md"
+            />
+            <img
+              src="/placeholder.svg"
+              width="300"
+              height="200"
+              alt="Image"
+              class="aspect-video object-cover rounded-md"
+            />
+            <img
+              src="/placeholder.svg"
+              width="300"
+              height="200"
+              alt="Image"
+              class="aspect-video object-cover rounded-md"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Update Images</h3>
+          <p class="text-sm text-muted-foreground">Edit and update the details of your existing images.</p>
+        </div>
+        <div class="p-6">
+          <div class="grid gap-4">
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="image-name"
+              >
+                Image Name
+              </label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="image-name"
+                type="text"
+                value="My Image"
+              />
+            </div>
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="image-description"
+              >
+                Description
+              </label>
+              <textarea
+                class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[100px]"
+                id="image-description"
+              >
+                This is a description of my image.
+              </textarea>
+            </div>
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="image-tags"
+              >
+                Tags
+              </label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="image-tags"
+                type="text"
+                value="tag1, tag2"
+              />
+            </div>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+              Update Image
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid gap-6">
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Search Images</h3>
+          <p class="text-sm text-muted-foreground">Find specific images using search and filters.</p>
+        </div>
+        <div class="p-6">
+          <div class="grid gap-4">
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="search-query"
+              >
+                Search
+              </label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="search-query"
+                placeholder="Search..."
+                type="text"
+              />
+            </div>
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="filter-by-tag"
+              >
+                Filter by Tag
+              </label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="filter-by-tag"
+                placeholder="Enter tags"
+                type="text"
+              />
+            </div>
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="filter-by-date"
+              >
+                Filter by Date
+              </label>
+              <div class="flex items-center gap-2">
+                <input
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  id="filter-by-date"
+                  type="date"
+                />
+                <span>to</span>
+                <input
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  type="date"
+                />
+              </div>
+            </div>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Extract Text</h3>
+          <p class="text-sm text-muted-foreground">
+            Extract text from your images using optical character recognition (OCR).
+          </p>
+        </div>
+        <div class="p-6">
+          <div class="grid gap-4">
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="image-to-extract"
+              >
+                Select Image
+              </label>
+              <input
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="image-to-extract"
+                type="file"
+              />
+            </div>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+              Extract Text
+            </button>
+            <div class="grid gap-2">
+              <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                Extracted Text
+              </label>
+              <textarea
+                class="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 min-h-[100px]"
+                readonly=""
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Delete Images</h3>
+          <p class="text-sm text-muted-foreground">Permanently delete images from your account.</p>
+        </div>
+        <div class="p-6">
+          <div class="grid gap-4">
+            <div class="grid gap-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="images-to-delete"
+              >
+                Select Images
+              </label>
+              <button
+                type="button"
+                role="combobox"
+                aria-controls="radix-:r5:"
+                aria-expanded="false"
+                aria-autocomplete="none"
+                dir="ltr"
+                data-state="closed"
+                data-placeholder=""
+                class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                <span style="pointer-events: none;">Select images</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-destructive text-destructive-foreground hover:bg-destructive/90 h-10 px-4 py-2">
+              Delete Images
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="border-t">
+    <div class="container px-4 md:px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
+          <img class="aspect-square h-full w-full" alt="User Avatar" src="/placeholder-user.jpg" />
+        </span>
+        <div>
+          <p class="font-medium">John Doe</p>
+          <p class="text-sm text-muted-foreground">Active now</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-5 w-5"
+          >
+            <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+          </svg>
+        </button>
+        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"></button>
+      </div>
+    </div>
+  </div>
+</div>
